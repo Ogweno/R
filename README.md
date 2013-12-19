@@ -2,5 +2,5 @@ R
 =
 
 My Experiments with R stats
-Twitter : @krishnakalyan3 \n
-Blog : latenttendencies.blogspot.com \n
+<br>Twitter : @krishnakalyan3</br>
+<br>Blog : latenttendencies.blogspot.com <\br>
