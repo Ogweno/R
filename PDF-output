@@ -1,0 +1,21 @@
+##install.packages("ggplot2")
+library(ggplot2)
+
+
+ggplotRegression <- function (fit) {  
+  require(ggplot2)  
+  ggplot(fit$model, aes_string(x = names(fit$model)[2], y = names(fit$model)[1])) + 
+    geom_point() +
+    stat_smooth(method = "lm", col = "blue") +
+    opts(title = paste("Adj R2 = ",signif(summary(fit)$adj.r.squared, 5),
+                       "; Intercept =",signif(fit$coef[[1]],5 ),
+                       "; Slope =",signif(fit$coef[[2]], 5),
+                       "; P =",signif(summary(fit)$coef[2,4], 5)))
+}
+
+## Outputs the PDF to Working Directory
+pdf("mypdf.pdf")
+
+attach(mtcars)
+ggplotRegression(lm(mpg~wt))
+dev.off()
