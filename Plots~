@@ -1,9 +1,0 @@
-dose  <- c(20, 30, 40, 45, 60)
-drugA <- c(16, 20, 27, 40, 60)
-drugB <- c(15, 18, 25, 31, 40)
-##Type b indicates both Line and point
-plot(dose, drugA, type="b")
-##Type c only line 
-plot(dose, drugA, type="c")
-## Only Points
-plot(dose,drugA)
